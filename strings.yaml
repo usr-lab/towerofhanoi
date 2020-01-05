@@ -1,0 +1,87 @@
+language: EN_US
+social:
+  start:
+    - ["\\pau=200\\ ^start(tower_of_hanoi/Wave) Hello, I'm NAO. ^wait(tower_of_hanoi/Wave) We will play the Tower of Hanoi with {num} disks. I really enjoy this game, \\pau=200\\ so I hope it will go well and you will like it.", 1]
+  order_disks:
+    - ["Please put the disks into the starting position", 1]
+    - ["Could you please move the disks into the starting position", 1]
+    - ["Now, please put the disks into the starting position", 1]
+  begin:
+    - ["Okay, let's start", 20]
+    - ["Yay, I can see we are ready to start. Let's go.", 20]
+    - ["Let us begin.", 20]
+  ask_move:
+    - ["Please move ^start({anim1}) the {disk} disk from {from_pole} ^wait({anim1}) ^start({anim2}) to {to_pole}.^wait({anim2})", 3]
+    - ["My move ^start({anim1}) is {disk} from {from_pole} ^wait({anim1}) ^start({anim2}) to {to_pole}.^wait({anim2}).", 4]
+    - ["I want to move ^start({anim1}) {disk} from {from_pole} ^wait({anim1}) ^start({anim2}) to {to_pole}.^wait({anim2}).", 4]
+    - ["^start({anim1}) {disk} from {from_pole} to ^wait({anim1}) ^start({anim2}) {to_pole}, please. ^wait({anim2}))", 3]
+    - ["The ^start({anim1}) {disk} one from {from_pole} to ^wait({anim1}) ^start({anim2}) {to_pole}. ^wait({anim2}))", 6]
+  your_turn:
+    - ["Your turn.", 1]
+    - ["Your move.", 1]
+  thank_you:
+    - ["Thanks!", 5]
+    - ["", 15]
+    - ["^start(tower_of_hanoi/Nodd) Okay! ^wait(tower_of_hanoi/Nodd)", 5]
+    - ["Okay.", 5]
+  move_registered:
+    - ["^start(tower_of_hanoi/Thinking) Umm ^wait(tower_of_hanoi/Thinking)", 1]
+    - ["^start(tower_of_hanoi/Thinking) What to do from here? ^wait(tower_of_hanoi/Thinking) \\pau=400\\", 1]
+    - ["Interesting.", 4]
+    - ["Umm", 5]
+    - ["Let me think for a second", 2]
+    - ["^start(tower_of_hanoi/Thinking)What should we do from here? ^wait(tower_of_hanoi/Thinking) \\pau=500\\", 1]
+    - ["^start(tower_of_hanoi/Nodd) Okay. ^wait(tower_of_hanoi/Nodd)", 3]
+  congratulations:
+    - ["Very nice! We have solved the Tower of Hanoi! We were quite good.\\pau=200\\ {num_moves} moves. \\pau=200\\ I want to play with you more often.", 1]
+  explanation: 
+    - ["Let me explain how it works.
+        We will play this game together.
+        We can move one disk at a time between the poles. \\pau=400\\
+        We are not allowed to put a big disk on top of a smaller one. \\pau=400\\
+        We start the game by you stacking all the disks, \\pau=200\\ ordered by size from big to small, \\pau=200\\ on your left side. \\pau=400\\
+        We will then take turns moving the disks, one at a time.
+        I will go first and, for my turns, I will ask you to move the disks for me.
+        The goal is to move all the disks to the right pole.",
+        1]
+  optimal_move:
+    - ["Your move was very good. This is a lot of fun. I enjoy playing with you.", 1]
+    - ["Yes! This is what I thought you will do.", 13]
+    - ["Nice Move! I haven't played with such a good partner in a while.", 13]
+    - ["Very good.", 13]
+    - ["", 60]
+  suboptimal_move:
+    - ["Oh no, your move wasn't that good.", 30]
+    - ["What a sad move. Let me undo it.", 30]
+    - ["What are you doing? \\pau=200\\ This was not good. \\pau=200\\ Let me undo this, and you can try again.", 30]
+non_social:
+  start:
+    - ["Hello,\\pau=200\\ I am NAO. \\pau=400\\ We will play the Tower of Hanoi with {num} disks. I have played the game with 27 people so far. The game should go well.", 1]
+  order_disks:
+    - ["Please put the disks into the starting position", 1]
+  begin:
+    - ["Okay, let's start", 1]
+  ask_move:
+    - ["Please move ^start({anim1}) the {disk} disk from {from_pole} ^wait({anim1}) ^start({anim2}) to {to_pole}.^wait({anim2})", 3]
+  your_turn:
+    - ["Your turn.", 1]
+  thank_you:
+    - ["Move registered!", 1]
+  move_registered:
+    - ["Move registered!", 1]
+  congratulations:
+    - ["Very nice! The game was completed with {num_moves} moves." , 1]
+  explanation: 
+     - ["Let me explain how the game works.
+        The game is played by two players \\pau=200\\ you, and me.
+        One player can only move one disk at a time between the poles. \\pau=400\\
+        Bigger disks are not allowed on top of smaller ones. \\pau=400\\
+        The game starts after all the disks are stacked on your left side, \\pau=200\\ ordered by size from big to small.\\pau=400\\
+        Each player then takes turns moving one disk at a time. \\pau=400\\
+        I will go first and, for my turns, I will ask you to move the disks for me.
+        The goal is to move all the disks to the right pole.",
+        1]
+  optimal_move:
+    - ["This was optimal.", 1]
+  suboptimal_move:
+    - ["This was not optimal.", 1]

@@ -1,0 +1,26 @@
+camera: {exposure: 0.13, gain: 64, whitebalance: 6500}
+disks:
+  blue:
+    color: [158, 124, 58]
+    high: [110, 197, 155]
+    low: [92, 153, 101]
+  green:
+    color: [28, 140, 42]
+    high: [67, 215, 176]
+    low: [53, 193, 142]
+  orange:
+    color: [38, 105, 233]
+    high: [19, 215, 255]
+    low: [5, 199, 237]
+  purple:
+    color: [128, 89, 124]
+    high: [163, 111, 153]
+    low: [129, 67, 117]
+  yellow:
+    color: [64, 255, 251]
+    high: [33, 191, 255]
+    low: [27, 175, 243]
+poles:
+  finish: !!python/tuple [230, 279, 18, 157]
+  middle: !!python/tuple [324, 278, 15, 161]
+  start: !!python/tuple [418, 289, 13, 148]
